@@ -1,0 +1,25 @@
+{
+  "name": "portofolio-simple-tailwind",
+  "version": "1.0.0",
+  "description": "A simple and responsive portfolio website built with Tailwind CSS. Designed to showcase your projects and works with a clean, minimal layout. Perfect for beginners learning Tailwind or anyone needing a quick personal portfolio template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JepriAlber/portofolio-simple-tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JepriAlber/portofolio-simple-tailwind/issues"
+  },
+  "homepage": "https://github.com/JepriAlber/portofolio-simple-tailwind#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
