@@ -1,9 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #06b6d4; /* sama seperti cyan-500 */
+  /* costume warna sama seperti cyan-500 */
+  --color-primary: #06b6d4; 
+  --color-dark:#0d1324;
+ /* padding container */
+ --container-padding: 16px;
+ /* breakpoint custom */
+ --breakpoint-2xl: 1320px;
+}
+
+@utility text-primary {
+  color: var(--color-primary);
+}
+@utility text-dark {
+  color: var(--color-dark);
+}
+@layer utilities {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  @utility text-primary {
-    color: var(--color-primary);
-  }
+}
