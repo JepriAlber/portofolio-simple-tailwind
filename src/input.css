@@ -2,12 +2,13 @@
 
 @theme {
   /* costume warna sama seperti cyan-500 */
-  --color-primary: #06b6d4; 
-  --color-dark:#0d1324;
- /* padding container */
- --container-padding: 16px;
- /* breakpoint custom */
- --breakpoint-2xl: 1320px;
+    --color-primary: #06b6d4; 
+    --color-dark:#0d1324;
+    --color-secondary:#64748b;
+  /* padding container */
+    --container-padding: 16px;
+  /* breakpoint custom */
+    --breakpoint-2xl: 1320px;
 }
 
 @utility text-primary {
@@ -15,6 +16,9 @@
 }
 @utility text-dark {
   color: var(--color-dark);
+}
+@utility text-secondary {
+  color: var(--color-secondary);
 }
 @layer utilities {
   .container {
