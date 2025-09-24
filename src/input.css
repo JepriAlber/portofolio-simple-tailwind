@@ -1,14 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  /* costume warna sama seperti cyan-500 */
-    --color-primary: #06b6d4; 
-    --color-dark:#0d1324;
-    --color-secondary:#64748b;
-  /* padding container */
-    --container-padding: 16px;
-  /* breakpoint custom */
-    --breakpoint-2xl: 1320px;
+  /* Custom warna */
+  --color-primary: #06b6d4; /* Sama seperti cyan-500 */
+  --color-dark: #0d1324;
+  --color-secondary: #64748b;
+  /* Padding container */
+  --container-padding: 16px;
 }
 
 @utility text-primary {
@@ -20,9 +18,41 @@
 @utility text-secondary {
   color: var(--color-secondary);
 }
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
 @layer utilities {
+
   .container {
     margin-left: auto;
     margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+  .navbar-fixed {
+    @apply fixed z-[9999] bg-white/70; /* Ganti bg-opacity-70 jadi bg-white/70 */
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-black;
+  }
+
+  .hamburger-active > span:nth-child(1) {
+    @apply  rotate-45;
+  }
+
+  .hamburger-active > span:nth-child(2) {
+    @apply scale-x-0; /* scale-0 di v4 lebih spesifik, pakai scale-x-0 untuk transform horizontal */
+  }
+
+  .hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
   }
 }
+ 
