@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Custom warna */
@@ -26,7 +26,6 @@
 }
 
 @layer utilities {
-
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -34,17 +33,16 @@
     padding-right: var(--container-padding);
   }
   .navbar-fixed {
-    @apply fixed z-[9999] bg-white/70; /* Ganti bg-opacity-70 jadi bg-white/70 */
-    backdrop-filter: blur(5px);
+    @apply fixed z-[9999] bg-white/70 backdrop-blur-xs; /* Ganti bg-opacity-70 jadi bg-white/70 */ 
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   }
 
   .hamburger-line {
-    @apply w-[30px] h-[2px] my-2 block bg-black;
+    @apply my-2 block h-[2px] w-[30px] bg-black;
   }
 
   .hamburger-active > span:nth-child(1) {
-    @apply  rotate-45;
+    @apply rotate-45;
   }
 
   .hamburger-active > span:nth-child(2) {
@@ -55,4 +53,3 @@
     @apply -rotate-45;
   }
 }
- 
