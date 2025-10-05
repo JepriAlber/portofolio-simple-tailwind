@@ -25,9 +25,35 @@ hamburger.addEventListener('click', function () {
 });
 
 //klik di luar hamberger
-window.addEventListener('click', function(e){
-  if(e.target != hamburger && e.target != navMenu){
+window.addEventListener('click', function (e) {
+  if (e.target != hamburger && e.target != navMenu) {
     hamburger.classList.remove('hamburger-active');
     navMenu.classList.add('hidden');
   }
 });
+
+//darkmode toggle
+const darkToggle = document.querySelector('#dark-toggle');
+const html = document.querySelector('html');
+
+darkToggle.addEventListener('click', function () {
+  console.log('darkToggle.checked', darkToggle.checked);
+  if (darkToggle.checked) {
+    html.classList.add('dark');
+    localStorage.theme = 'dark';
+  } else {
+    html.classList.remove('dark');
+    localStorage.theme = 'light';
+  }
+});
+
+//position toggle by mode
+const isDark =
+  localStorage.theme === 'dark' ||
+  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+document.documentElement.classList.toggle('dark', isDark);
+
+if (darkToggle) {
+  darkToggle.checked = isDark;
+}
